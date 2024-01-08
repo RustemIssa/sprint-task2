@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #4267B2;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .search-input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            padding: 8px 15px;
+            background-color: #4267B2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 150px; /* Узкая панель навигации */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4267B2;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .friends {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .friend {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 5px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+
+        .info-item-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .info-item-value {
+            font-weight: normal;
+        }
+
+        .counters {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .counter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .counter-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .counter-label {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .photos {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .photo {
+            width: 100px;
+            height: 100px; /* Изменено на квадратные картинки */
+            object-fit: cover;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ВКонтакте</div>
+        <div class="search-bar">
+            <input class="search-input" type="text" placeholder="Поиск">
+            <button class="search-button">Найти</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="#">Моя страница</a>
+            <a href="#">Новости</a>
+            <a href="#">Сообщения</a>
+            <a href="#">Друзья</a>
+            <a href="#">Группы</a>
+            <a href="#">Фотографии</a>
+            <a href="#">Музыка</a>
+            <a href="#">Видео</a>
+        </nav>
+
+        <div class="right">
+            <div class="left">
+                <img class="avatar" src="img/q1.png">
+                <div class="friends">
+                    <img class="friend" src="img/q1.png">
+                    <img class="friend" src="img/q2.png">
+                    <img class="friend" src="img/q3.jpeg">
+                    <img class="friend" src="img/q4.jpg">
+                    <img class="friend" src="img/q5.png">
+                </div>
+            </div>
+            <div class="name">Saken Saparbay</div>
+            <div class="status">you're Welcome!</div>
+            <div class="info">
+                <div class="info-item">
+                    <div class="info-item-label">Дата рождения:</div>
+                    <div class="info-item-value">20 мая 2004 г., 19 лет</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-item-label">Город:</div>
+                    <div class="info-item-value">Алматы</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-item-label">Образование:</div>
+                    <div class="info-item-value">Школа: Средняя школа 145</div>
+                </div>
+            </div>
+            <div class="counters">
+                <div class="counter">
+                    <div class="counter-value">1000</div>
+                    <div class="counter-label">Друзья</div>
+                </div>
+                <div class="counter">
+                    <div class="counter-value">500</div>
+                    <div class="counter-label">Подписчики</div>
+                </div>
+                <div class="counter">
+                    <div class="counter-value">200</div>
+                    <div class="counter-label">Фотографии</div>
+                </div>
+            </div>
+            <div class="photos">
+                <img class="photo" src="img/q6.jpg">
+                <img class="photo" src="img/q7.jpg">
+                <img class="photo" src="img/q7.jpg">
+                <img class="photo" src="img/q8.JPG">
+                <img class="photo" src="img/q9.JPG">
+                <img class="photo" src="img/q10.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
